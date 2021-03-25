@@ -8,11 +8,19 @@ import java.util.Scanner;
 public class Task4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число: ");
         int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        int d = scanner.nextInt();
-        System.out.println("Число = " + d + c + b + a);
+        if (a > 999 && a < 10000) {
+            int thousands = (a % 10) * 1000;
+            int hundreds = (a % 100 - a % 10) * 10;
+            int dozens = (a % 1000 - a % 100) / 10;
+            int numbers = a / 1000;
+            int count = thousands + hundreds + dozens + numbers;
+            System.out.println("Число = " + count);
+        } else {
+            System.out.println("Число не 4-х значное");
+        }
+
     }
 
 }
