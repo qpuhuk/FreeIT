@@ -6,7 +6,8 @@ package AlexLink.HomeWork.Arrays;
 //        индексом к элементу из второго массива с i-ым индексом. Вывести все три
 //        массива на экран (каждый на отдельной строке), затем вывести количество
 //        целых элементов в третьем массиве.
-
+//8) Найти второй по величине (т.е. следующий по величине за максимальным)
+//элемент в массиве.
 import java.util.Arrays;
 
 public class Task8 {
@@ -23,10 +24,12 @@ public class Task8 {
         System.out.println(Arrays.toString(array2));
         System.out.println(Arrays.toString(array3));
         int countIntNumber = 0;
-        for (int i = 0; i < array3.length; i++) {
-            if ((array3[i] % 1) == 0)
+        for (double v : array3) {
+            if ((v % 1) == 0)
                 countIntNumber++;
         }
         System.out.println("Количество целых чисел в массиве №3: " + countIntNumber);
+        Arrays.sort(array3);
+        System.out.println("Предмаксимальное значение = " + array3[array3.length - 2]);
     }
 }

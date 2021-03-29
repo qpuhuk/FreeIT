@@ -6,7 +6,8 @@ package AlexLink.HomeWork.Arrays;
 //        целых чисел из отрезка [0;n] и вывести его на экран. Создать второй массив
 //        только из чётных элементов первого массива, если они там есть, и вывести его
 //        на экран.
-
+//10) Найти максимальный элемент в массиве и поменять его местами с нулевым
+//элементом
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -17,11 +18,26 @@ public class Task10 {
         Scanner scanner = new Scanner(System.in);
         int n;
         int[] array;
+        int max = Integer.MIN_VALUE;
+        int index = 0;
         System.out.println("Введите число: ");
         if (scanner.hasNextInt()) {
             n = scanner.nextInt();
             array = getArray(n);
             getArray2(array);
+            if (n > 3) {
+                for (int i = 0; i < array.length; i++) {
+                    if (max < array[i]) {
+                        max = array[i];
+                        index = i;
+                    }
+                }
+
+                int temp = array[0];
+                array[0] = array[index];
+                array[index] = temp;
+                System.out.println(Arrays.toString(array));
+            }
         } else {
             System.out.println("Вы ввели неверное значение, попробуйте еще раз.");
         }
