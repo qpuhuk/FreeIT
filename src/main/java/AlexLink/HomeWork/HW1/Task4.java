@@ -20,7 +20,5 @@ public class Task4 {
         } else {
             System.out.println("Число не 4-х значное");
         }
-
     }
-
 }

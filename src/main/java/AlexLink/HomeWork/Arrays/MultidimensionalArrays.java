@@ -15,7 +15,7 @@ package AlexLink.HomeWork.Arrays;
 
 import java.util.Scanner;
 
-public class MultidimensionalАrrays {
+public class MultidimensionalArrays {
     public static void main(String[] args) {
 //Создаём квадратную матрицу, размер вводим с клавиатуры. Заполняем случайными числами в диапазоне от 0 до 50. И выводим на консоль(в виде матрицы).
         Scanner scanner = new Scanner(System.in);
