@@ -1,6 +1,6 @@
 package AlexLink.HomeWork.HomeworkStream.Task1;
 
-abstract class Animal{
+abstract class Animal {
     String name;
     int speed;
 
