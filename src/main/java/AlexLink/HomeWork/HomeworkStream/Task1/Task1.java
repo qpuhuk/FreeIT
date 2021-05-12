@@ -1,0 +1,16 @@
+package AlexLink.HomeWork.HomeworkStream.Task1;
+
+//Создать свой функциональный интерфейс для вывода на консоль данных объекта.
+//С помощью лямбда-выражения вывести данные для объектов типа String и Integer.
+
+public class Task1 {
+    public static void main(String[] args) {
+
+        Animal cat = new Cat("Murzik", 10);
+        Animal dog = new Dog("Jessi", 20);
+        Run run = a -> System.out.println("Speed of the " + a.getName() + " = " + a.getSpeed());
+
+        run.run(cat);
+        run.run(dog);
+    }
+}
