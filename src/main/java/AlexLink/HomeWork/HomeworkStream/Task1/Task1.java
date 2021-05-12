@@ -3,8 +3,6 @@ package AlexLink.HomeWork.HomeworkStream.Task1;
 //Создать свой функциональный интерфейс для вывода на консоль данных объекта.
 //С помощью лямбда-выражения вывести данные для объектов типа String и Integer.
 
-import java.sql.SQLOutput;
-
 public class Task1 {
     public static void main(String[] args) {
 
