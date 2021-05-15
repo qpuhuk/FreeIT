@@ -12,7 +12,5 @@ public class Runner {
         System.out.println(notepad);
         notepad.setNote1("Передумал, пойду погуляю");
         System.out.println(notepad);
-
-
     }
 }

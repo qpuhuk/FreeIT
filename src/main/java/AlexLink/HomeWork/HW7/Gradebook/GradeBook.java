@@ -1,11 +1,18 @@
 package AlexLink.HomeWork.HW7.Gradebook;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GradeBook {
 
     int allScore;
+    List<Exam> examList;
     private int countExam;
-    private double middleScore;
+
+    public GradeBook() {
+        this.examList = new ArrayList<>();
+    }
 
     public int getCountExam() {
         return countExam;
@@ -16,8 +23,9 @@ public class GradeBook {
     }
 
     public Exam addExam(String nameExam, int score, String version) {
-
-        return new Exam(nameExam, score, version);
+        Exam temp = new Exam(nameExam, score, version);
+        examList.add(temp);
+        return temp;
     }
 
     @Override

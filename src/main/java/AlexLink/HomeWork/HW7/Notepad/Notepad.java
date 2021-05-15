@@ -1,7 +1,6 @@
 package AlexLink.HomeWork.HW7.Notepad;
 
 
-
 import java.time.LocalDate;
 
 public class Notepad {

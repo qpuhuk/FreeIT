@@ -1,32 +1,29 @@
 package AlexLink.HomeWork.HW7.Payment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Payment {
-    Product product;
-    Product product2;
-    Product product3;
+    List<Product> productList;
     private int count;
+
+    public Payment() {
+        this.productList = new ArrayList<>();
+    }
 
     public int getCount() {
         return count;
     }
 
     public void setProduct(String name, int price) {
-        this.product = new Product(name, price);
-    }
-
-    public void setProduct2(String name, int price) {
-        this.product2 = new Product(name, price);
-    }
-
-    public void setProduct3(String name, int price) {
-        this.product3 = new Product(name, price);
+        productList.add(new Product(name, price));
     }
 
     @Override
     public String toString() {
         return "Продукты в корзине: \n" +
-                product + product2 + product3 +
-                "Количество продуктов в корзине = " + count;
+                productList +
+                "\nКоличество продуктов в корзине = " + count;
     }
 
     class Product {
@@ -41,7 +38,7 @@ public class Payment {
 
         @Override
         public String toString() {
-            return nameProduct + " - цена продукта = " + priceProduct + "р.\n";
+            return nameProduct + " - цена продукта = " + priceProduct + "р.";
         }
     }
 }

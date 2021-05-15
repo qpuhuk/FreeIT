@@ -1,10 +1,23 @@
 package AlexLink.HomeWork.HW7.City;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class City {
     private String name;
+    private List<Title> listStreetsAndSquares;
 
     public City(String name) {
         this.name = name;
+        listStreetsAndSquares = new ArrayList<>();
+    }
+
+    public List<Title> getListStreetsAndSquares() {
+        return listStreetsAndSquares;
+    }
+
+    void addStreetOrSquare(Title title) {
+        listStreetsAndSquares.add(title);
     }
 
     public String getName() {
@@ -15,7 +28,7 @@ public class City {
         this.name = name;
     }
 
-    static class Street extends Title {
+    class Street extends Title {
         private int length;
 
         public Street(String title, int length) {
@@ -29,6 +42,13 @@ public class City {
 
         public void setLength(int length) {
             this.length = length;
+        }
+
+        @Override
+        public String toString() {
+            return "Street{" +
+                    "length=" + length +
+                    "} " + super.toString();
         }
     }
 
@@ -46,6 +66,13 @@ public class City {
 
         public void setSquare(int square) {
             this.square = square;
+        }
+
+        @Override
+        public String toString() {
+            return "Square{" +
+                    "square=" + square +
+                    "} " + super.toString();
         }
     }
 }
