@@ -7,7 +7,9 @@ package AlexLink.HomeWork.HomeworkLists;
 //Создать коллекцию, наполнить ее случайными числами. Удалить повторяющиеся
 //числа.
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Lists {
     public static void main(String[] args) {
@@ -17,16 +19,13 @@ public class Lists {
             points.add(((int) (Math.random() * 11)));
         }
         System.out.println(points);
-
-                List<Integer> randomNumber = new ArrayList<>(points);
-
+        List<Integer> randomNumber = new ArrayList<>(points);
         points.removeIf(s -> s < 3);
         System.out.println(points);
-
         Collections.sort(randomNumber);
         System.out.println(randomNumber);
         for (int i = randomNumber.size(); i > 0; i--) {
-            if (i == 1){
+            if (i == 1) {
                 break;
             }
             if (randomNumber.get(i - 1).equals(randomNumber.get(i - 2))) {
@@ -36,16 +35,6 @@ public class Lists {
             }
         }
         System.out.println(randomNumber);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
     }
 }
 
