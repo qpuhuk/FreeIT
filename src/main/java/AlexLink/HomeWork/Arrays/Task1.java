@@ -11,7 +11,7 @@ public class Task1 {
     public static void main(String[] args) {
         int[] evenNumbers = new int[10];
         int sub = 1;
-        for (int i = 0, count = 0; i < evenNumbers.length; i++, count = count + 2) {
+        for (int i = 0, count = 0; i < evenNumbers.length; i++, count += 2) {
             evenNumbers[i] = count + 2;
 
         }
@@ -20,7 +20,7 @@ public class Task1 {
         }
         System.out.println("\n");
         for (int a : evenNumbers) {
-            System.out.print(a + "\n");
+            System.out.println(a);
         }
         System.out.println();
         for (int a : evenNumbers) {

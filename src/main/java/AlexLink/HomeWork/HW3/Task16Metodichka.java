@@ -1,21 +1,36 @@
 package AlexLink.HomeWork.HW3;
 
-//РћРїСЂРµРґРµР»РёС‚Рµ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°, СЂР°СЃРїРѕР»РѕР¶РµРЅРЅС‹С… РјРµР¶РґСѓ
-//        РјРёРЅРёРјР°Р»СЊРЅС‹Рј Рё РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј Р·РЅР°С‡РµРЅРёСЏРјРё.
+//Определите сумму элементов одномерного массива, расположенных между
+//        минимальным и максимальным значениями.
+
+import java.sql.Array;
+import java.util.*;
 
 public class Task16Metodichka {
     private static int sum;
 
     public static void main(String[] args) {
 
-        int[] array = {4, 7, 9, 33, 634, 64, 234, 31};
-        int min = 10;
-        int max = 100;
-
+        int[] array = {4, 5, 9, 15, 3, 10, 21, 23};
+        int min = Arrays.stream(array).min().getAsInt();
+        int max = Arrays.stream(array).max().getAsInt();
+        int indexMin = 0;
+        int indexMax = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > min && array[i] < max)
-                sum += i;
+            if (array[i] == min) {
+                indexMin = i;
+            }
+            if (array[i] == max) {
+                indexMax = i;
+            }
         }
-        System.out.println("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° = " + sum);
+        if ((indexMax - indexMin) > 0) {
+            int [] newArray = Arrays.copyOfRange(array,indexMin,indexMax + 1);
+            sum = Arrays.stream(newArray).sum();
+        } else {
+            int [] newArrayTwo = Arrays.copyOfRange(array,indexMax,indexMin + 1);
+            sum = Arrays.stream(newArrayTwo).sum();
+        }
+        System.out.println("Сумма элементов массива = " + sum);
     }
 }
