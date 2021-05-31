@@ -1,10 +1,9 @@
 package AlexLink.HomeWork.HW3;
 
-//Определите сумму элементов одномерного массива, расположенных между
-//        минимальным и максимальным значениями.
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+//        пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 
-import java.sql.Array;
-import java.util.*;
+import java.util.Arrays;
 
 public class Task16Metodichka {
     private static int sum;
@@ -25,12 +24,12 @@ public class Task16Metodichka {
             }
         }
         if ((indexMax - indexMin) > 0) {
-            int [] newArray = Arrays.copyOfRange(array,indexMin,indexMax + 1);
+            int[] newArray = Arrays.copyOfRange(array, indexMin, indexMax + 1);
             sum = Arrays.stream(newArray).sum();
         } else {
-            int [] newArrayTwo = Arrays.copyOfRange(array,indexMax,indexMin + 1);
+            int[] newArrayTwo = Arrays.copyOfRange(array, indexMax, indexMin + 1);
             sum = Arrays.stream(newArrayTwo).sum();
         }
-        System.out.println("Сумма элементов массива = " + sum);
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ = " + sum);
     }
 }
