@@ -1,6 +1,6 @@
 package AlexLink.HomeWork.HW3;
 
-//Найти сумму элементов между большим и меньшим элементом массива
+//РќР°Р№С‚Рё СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РјРµР¶РґСѓ Р±РѕР»СЊС€РёРј Рё РјРµРЅСЊС€РёРј СЌР»РµРјРµРЅС‚РѕРј РјР°СЃСЃРёРІР°
 
 
 import java.util.Arrays;
@@ -30,6 +30,6 @@ public class Task16Metodichka {
             int[] newArrayTwo = Arrays.copyOfRange(array, indexMax, indexMin + 1);
             sum = Arrays.stream(newArrayTwo).sum();
         }
-        System.out.println("Сумма = " + sum);
+        System.out.println("РЎСѓРјРјР° = " + sum);
     }
 }
