@@ -1,11 +1,11 @@
 package AlexLink.HomeWork.HW1;
 
-/*Имеется 4500 секунд. Вывести в консоль содержащихся в этом количестве секунд:
-А) минут + секунд,
-В) часов + минут + секунд,
-С) дней + часов + минут + секунд,
-D) недель + дней + часов + минут + секунд.
-по аналогии с примером выше.*/
+/*РРјРµРµС‚СЃСЏ 4500 СЃРµРєСѓРЅРґ. Р’С‹РІРµСЃС‚Рё РІ РєРѕРЅСЃРѕР»СЊ СЃРѕРґРµСЂР¶Р°С‰РёС…СЃСЏ РІ СЌС‚РѕРј РєРѕР»РёС‡РµСЃС‚РІРµ СЃРµРєСѓРЅРґ:
+Рђ) РјРёРЅСѓС‚ + СЃРµРєСѓРЅРґ,
+Р’) С‡Р°СЃРѕРІ + РјРёРЅСѓС‚ + СЃРµРєСѓРЅРґ,
+РЎ) РґРЅРµР№ + С‡Р°СЃРѕРІ + РјРёРЅСѓС‚ + СЃРµРєСѓРЅРґ,
+D) РЅРµРґРµР»СЊ + РґРЅРµР№ + С‡Р°СЃРѕРІ + РјРёРЅСѓС‚ + СЃРµРєСѓРЅРґ.
+РїРѕ Р°РЅР°Р»РѕРіРёРё СЃ РїСЂРёРјРµСЂРѕРј РІС‹С€Рµ.*/
 
 public class Task3 {
     public static void main(String[] args) {
@@ -20,9 +20,9 @@ public class Task3 {
         int quantityDays = quantityDaysOfSec % 7;
         int quantityWeeks = (quantityDaysOfSec - quantityDays) / 7;
 
-        System.out.printf("%d минут %d секунд\n", quantityMin, quantityIntMin);
-        System.out.printf("%d часов %d минут %d секунд\n", quantityHours, quantityMin , quantityIntMin);
-        System.out.printf("%d дней %d часов %d минут %d секунд\n", quantityDays, quantityHours, quantityMin , quantityIntMin);
-        System.out.printf("%d недель %d дней %d часов %d минут %d секунд\n",quantityWeeks, quantityDays, quantityHours, quantityMin , quantityIntMin);
+        System.out.printf("%d РјРёРЅСѓС‚ %d СЃРµРєСѓРЅРґ\n", quantityMin, quantityIntMin);
+        System.out.printf("%d С‡Р°СЃРѕРІ %d РјРёРЅСѓС‚ %d СЃРµРєСѓРЅРґ\n", quantityHours, quantityMin , quantityIntMin);
+        System.out.printf("%d РґРЅРµР№ %d С‡Р°СЃРѕРІ %d РјРёРЅСѓС‚ %d СЃРµРєСѓРЅРґ\n", quantityDays, quantityHours, quantityMin , quantityIntMin);
+        System.out.printf("%d РЅРµРґРµР»СЊ %d РґРЅРµР№ %d С‡Р°СЃРѕРІ %d РјРёРЅСѓС‚ %d СЃРµРєСѓРЅРґ\n",quantityWeeks, quantityDays, quantityHours, quantityMin , quantityIntMin);
     }
 }
