@@ -10,14 +10,14 @@ public class Runner {
         test.array = new Integer[10];
         for (int i = 0; i < test.array.length; i++) {
             test.array[i] = i;
-            System.out.println(test.getArray(i));
+            System.out.println(test.getArrayElemen(i));
         }
         System.out.println("**************************************");
         Generics<String> test1 = new Generics<>();
         test1.array = new String[10];
         for (int i = 0; i < test1.array.length; i++) {
             test1.array[i] = "Число " + i;
-            System.out.println(test1.getArray(i));
+            System.out.println(test1.getArrayElemen(i));
         }
     }
 }
