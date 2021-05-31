@@ -38,7 +38,7 @@ public class Car {
         this.price = price;
     }
 
-    void start() throws StartException {
+    public void start() throws StartException {
         int random = (int) (Math.random() * 21);
         if (random % 2 == 0) {
             throw new StartException("Error, impossible start engine");
