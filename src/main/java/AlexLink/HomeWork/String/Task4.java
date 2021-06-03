@@ -25,10 +25,10 @@ public class Task4 {
         for (String temp : divSentence) {
             String format = temp.trim();
             int countWord = TextFormatter.countWordsInString(format);
-            boolean pol = TextFormatter.checkPolindromInSentence(format);
-            if ((countWord > 3 && countWord <= 5) || pol)
+            if ((countWord >= 3 && countWord <= 5) || TextFormatter.checkPolindromInSentence(format)) {
                 stringBuilder.append(format).append(". ");
+            }
         }
-        System.out.println(stringBuilder.toString());
+        System.out.println(stringBuilder);
     }
 }

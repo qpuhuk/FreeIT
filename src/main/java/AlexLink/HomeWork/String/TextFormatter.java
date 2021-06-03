@@ -3,17 +3,13 @@ package AlexLink.HomeWork.String;
 import java.util.Arrays;
 
 public class TextFormatter {
-    private static String pattern = "\\s|([.,!?-]\\s)|\\.";
+    private static final String PUNCTUATION_MARKS_PATTERN = "\\s|([.,!?-]\\s)|\\.";
     protected static int countWordsInString(String str) {
-        int count = 0;
-        String[] del = str.split(pattern);
-        for (String s : del) {
-            count++;
-        }
-        return count;
+        String[] del = str.split(PUNCTUATION_MARKS_PATTERN);
+        return del.length;
     }
     protected static boolean checkPolindromInSentence(String str) {
-        String[] del = str.split(pattern);
+        String[] del = str.split(PUNCTUATION_MARKS_PATTERN);
         for (String word : del) {
                 char[] orderLetter = word.toCharArray();
                 int countLetterInWord = 0;

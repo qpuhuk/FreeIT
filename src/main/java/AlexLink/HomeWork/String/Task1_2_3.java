@@ -44,6 +44,6 @@ public class Task1_2_3 {
                 }
             }
         }
-        System.out.println("Слова полиндромы в строке - " + stringBuilder.toString());
+        System.out.println("Слова полиндромы в строке - " + stringBuilder);
     }
 }
