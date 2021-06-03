@@ -8,9 +8,6 @@ public class SamsungHead implements IHead {
         this.price = price;
     }
 
-    public SamsungHead () {
-    }
-
     public void setPrice(int price) {
         this.price = price;
     }

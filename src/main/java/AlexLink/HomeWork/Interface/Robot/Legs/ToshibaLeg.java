@@ -7,9 +7,6 @@ public class ToshibaLeg implements ILeg{
         this.price = price;
     }
 
-    public ToshibaLeg() {
-    }
-
     @Override
     public void step() {
         System.out.println("Делает шаг нога Toshiba");

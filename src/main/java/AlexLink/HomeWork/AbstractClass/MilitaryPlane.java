@@ -8,7 +8,7 @@ public class MilitaryPlane extends FlyTransport {
     public MilitaryPlane(int power, int maxSpeed, int weight, String model, int wingspan, int minLengthRunway, boolean availableEjectionSystem, int countRocket) {
         super(power, maxSpeed, weight, model, wingspan, minLengthRunway);
         this.availableEjectionSystem = availableEjectionSystem;
-        if (countRocket > 0 && countRocket < 20) this.countRocket = countRocket;
+        this.countRocket = countRocket;
     }
 
     public boolean isAvailableEjectionSystem() {
@@ -41,7 +41,12 @@ public class MilitaryPlane extends FlyTransport {
     }
 
     void checkRocket() {
-        System.out.println(countRocket > 0 ? "Ракета пошла…" : "Боеприпасы отсутствуют");
+        if (countRocket > 0) {
+            System.out.println("Ракета пошла…");
+            countRocket--;
+        } else {
+            System.out.println("Боеприпасы отсутствуют");
+        }
     }
 
     void checkEjection() {

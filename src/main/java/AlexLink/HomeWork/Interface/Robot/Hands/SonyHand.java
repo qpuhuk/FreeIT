@@ -7,9 +7,6 @@ public class SonyHand implements IHand{
         this.price = price;
     }
 
-    public SonyHand() {
-    }
-
     @Override
     public void upHand() {
         System.out.println("Поднимает руку Sony");

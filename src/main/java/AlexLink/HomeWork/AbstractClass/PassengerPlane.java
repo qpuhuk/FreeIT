@@ -7,7 +7,7 @@ public class PassengerPlane extends FlyTransport {
 
     public PassengerPlane(int power, int maxSpeed, int weight, String model, int wingspan, int minLengthRunway, int countPassengers, boolean availableBusinessClass) {
         super(power, maxSpeed, weight, model, wingspan, minLengthRunway);
-        if (countPassengers > 10 && countPassengers < 400) this.countPassengers = countPassengers;
+        this.countPassengers = countPassengers;
         this.availableBusinessClass = availableBusinessClass;
     }
 

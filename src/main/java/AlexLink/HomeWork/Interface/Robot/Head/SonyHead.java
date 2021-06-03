@@ -7,9 +7,6 @@ public class SonyHead implements IHead {
         this.price = price;
     }
 
-    public SonyHead() {
-    }
-
     public void setPrice(int price) {
         this.price = price;
     }

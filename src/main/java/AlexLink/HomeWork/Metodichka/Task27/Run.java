@@ -6,10 +6,11 @@ package AlexLink.HomeWork.Metodichka.Task27;
 //Иерархия должна иметь хотя бы три уровня.
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Run {
     public static void main(String[] args) {
-        ArrayList<Appliances> appliances = new ArrayList<>();
+        List<Appliances> appliances = new ArrayList<>();
         appliances.add(new GasStove("Philips", "Big", 2, 4));
         appliances.add(new Teapot("Sony","Small", 220,true));
         appliances.add(new Fridge("Siemens","Big",220,4));

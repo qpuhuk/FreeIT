@@ -7,9 +7,6 @@ public class SamsungLeg implements ILeg{
         this.price = price;
     }
 
-    public SamsungLeg() {
-    }
-
     public void setPrice(int price) {
         this.price = price;
     }

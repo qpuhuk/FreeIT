@@ -52,8 +52,7 @@ public class RunTest {
         int time = 2;
         PassengerCar passengerCarNew = new PassengerCar(220, 300, 2000, "Audi",
                 4, 10, "Sedan", 4);
-        System.out.printf("За время %d ч, автомобиль %s, двигаясь с максимальной скоростью %d км/ч проедет %d км  и израсходует %d литров топлива.\n",
-                time, passengerCarNew.getModel(), passengerCarNew.getMaxSpeed(), passengerCarNew.maxDistance(time), passengerCarNew.getFuel(time));
+        passengerCarNew.info(time, passengerCarNew.getModel(), passengerCarNew.getMaxSpeed(), passengerCarNew.maxDistance(time), passengerCarNew.getFuel(time));
         System.out.println("***************************");
 //Для грузового разработать метод который проверит можно ли загрузить в него xxx  груза
 //Метод должен проверять если это кол-во груза помещается в грузовик то выводит в консоль ”Грузовик загружен”, если кол-во груза которое нужно загрузить больше чем то которое может влезть в наш грузовик то выводим

@@ -7,8 +7,8 @@ public abstract class GroundTransport extends Transport {
 
     public GroundTransport(int power, int maxSpeed, int weight, String model, int countWheel, int fuelConsumption) {
         super(power, maxSpeed, weight, model);
-        if (countWheel > 1 && countWheel < 9) this.countWheel = countWheel;
-        if (fuelConsumption > 1 && fuelConsumption < 40) this.fuelConsumption = fuelConsumption;
+        this.countWheel = countWheel;
+        this.fuelConsumption = fuelConsumption;
     }
 
     public int getCountWheel() {
@@ -35,6 +35,4 @@ public abstract class GroundTransport extends Transport {
                 ", fuelConsumption = " + fuelConsumption + " l/100km" +
                 super.toString();
     }
-
-
 }

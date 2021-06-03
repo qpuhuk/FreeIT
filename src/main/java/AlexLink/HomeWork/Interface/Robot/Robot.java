@@ -15,9 +15,6 @@ public class Robot implements IRobot {
         this.leg = leg;
     }
 
-    public Robot() {
-    }
-
     public IHead getHead() {
         return head;
     }

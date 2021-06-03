@@ -7,10 +7,10 @@ public abstract class Transport {
     private String model;
 
     public Transport(int power, int maxSpeed, int weight, String model) {
-        if (power > 0 && power < 5000) this.power = power;
-        if (maxSpeed > 0 && maxSpeed < 2000) this.maxSpeed = maxSpeed;
-        if (weight > 0 && weight < 50000) this.weight = weight;
-        if (model.equals("Audi") || model.equals("Toyota") || model.equals("Boing")) this.model = model;
+        this.power = power;
+        this.maxSpeed = maxSpeed;
+        this.weight = weight;
+        this.model = model;
     }
 
     public int getPower() {
@@ -50,10 +50,7 @@ public abstract class Transport {
     }
 
     double calcPower(int power) {
-        if (power > 0 && power < 5000)
             return power * 0.74;
-        else
-            return 0.0;
     }
 
     @Override

@@ -10,17 +10,17 @@ package AlexLink.HomeWork.Metodichka;
 
 public class Task24 {
     public static void main(String[] args) {
-        Time time = new Time(4000);
-        Time time1 = new Time(50,10,1);
-        System.out.println("Количество секунд в объекте №1 = " + time.convertInSec() + "\n*******************");
-        System.out.println("Количество секунд в объекте №2 = " + time1.convertInSec() + "\n*******************");
+        Time time = new Time(5000);
+        Time time1 = new Time(50, 10, 1);
+        System.out.println("Количество секунд в объекте №1 = " + time.getSec() + "\n*******************");
+        System.out.println("Количество секунд в объекте №2 = " + time1.getSec() + "\n*******************");
         System.out.println("Выводим оба объекта в консоль при помощи метода print(): ");
         time.print();
         time1.print();
         System.out.println("*******************");
         System.out.print("Наибольшее время = ");
-        time.compareTime(time,time1).print();
-
+        int result = time.compareTime(time1);
+        System.out.println(result);
     }
 
     static class Time {
@@ -42,27 +42,15 @@ public class Task24 {
         }
 
         public int getSec() {
-            return sec;
-        }
-
-        public int getMin() {
-            return min;
-        }
-
-        public int getHours() {
-            return hours;
-        }
-
-        int convertInSec() {
             return hours * 3600 + min * 60 + sec;
         }
 
-        Time compareTime(Time t, Time r) {
-            return (t.convertInSec() > r.convertInSec()) ? t : r;
+        public int compareTime(Time t) {
+            return Integer.compare(this.getSec(), t.getSec());
         }
 
-        void print(){
-            System.out.printf("%d час(ов), %d минут(а) %d секунд(а)\n", hours,min,sec);
+        void print() {
+            System.out.printf("%d час(ов), %d минут(а) %d секунд(а)\n", hours, min, sec);
         }
     }
 }

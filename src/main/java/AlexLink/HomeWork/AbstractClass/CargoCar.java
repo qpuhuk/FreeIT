@@ -6,7 +6,7 @@ public class CargoCar extends GroundTransport {
 
     public CargoCar(int power, int maxSpeed, int weight, String model, int countWheel, int fuelConsumption, int loadCapacity) {
         super(power, maxSpeed, weight, model, countWheel, fuelConsumption);
-        if (loadCapacity > 0 && loadCapacity < 10000) this.loadCapacity = loadCapacity;
+        this.loadCapacity = loadCapacity;
     }
 
     public int getLoadCapacity() {
