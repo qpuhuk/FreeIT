@@ -6,7 +6,7 @@ public class CargoCar extends GroundTransport {
 
     public CargoCar(int power, int maxSpeed, int weight, String model, int countWheel, int fuelConsumption, int loadCapacity) {
         super(power, maxSpeed, weight, model, countWheel, fuelConsumption);
-        this.loadCapacity = loadCapacity;
+        setLoadCapacity(loadCapacity);
     }
 
     public int getLoadCapacity() {

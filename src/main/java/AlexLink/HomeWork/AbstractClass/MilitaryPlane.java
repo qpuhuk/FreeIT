@@ -8,7 +8,7 @@ public class MilitaryPlane extends FlyTransport {
     public MilitaryPlane(int power, int maxSpeed, int weight, String model, int wingspan, int minLengthRunway, boolean availableEjectionSystem, int countRocket) {
         super(power, maxSpeed, weight, model, wingspan, minLengthRunway);
         this.availableEjectionSystem = availableEjectionSystem;
-        this.countRocket = countRocket;
+        setCountRocket(countRocket);
     }
 
     public boolean isAvailableEjectionSystem() {

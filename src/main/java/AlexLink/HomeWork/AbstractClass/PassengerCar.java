@@ -8,7 +8,7 @@ public class PassengerCar extends GroundTransport {
     public PassengerCar(int power, int maxSpeed, int weight, String model, int countWheel, int fuelConsumption, String bodyType, int countPassengers) {
         super(power, maxSpeed, weight, model, countWheel, fuelConsumption);
         this.bodyType = bodyType;
-        this.countPassengers = countPassengers;
+        setCountPassengers(countPassengers);
     }
 
     public String getBodyType() {
@@ -53,8 +53,8 @@ public class PassengerCar extends GroundTransport {
         return fuel(hours);
     }
 
-    public void info(int time, String model, int maxSpeed, int distance, int fuel){
+    public void info(int time){
         System.out.printf("За время %d ч, автомобиль %s, двигаясь с максимальной скоростью %d км/ч проедет %d км  и израсходует %d литров топлива.\n",
-                time, model, maxSpeed, distance, fuel);
+                time, this.getModel(), this.getMaxSpeed(), this.maxDistance(time), this.getFuel(time));
     }
 }

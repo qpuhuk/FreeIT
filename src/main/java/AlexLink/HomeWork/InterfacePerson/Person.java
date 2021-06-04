@@ -4,13 +4,12 @@ import AlexLink.HomeWork.InterfacePerson.Jacket.Jacket;
 import AlexLink.HomeWork.InterfacePerson.Pants.Pants;
 import AlexLink.HomeWork.InterfacePerson.Shoes.Shoes;
 
-public class Person implements Jacket, Pants, Shoes {
+public class Person {
 
     private final String name;
     private final Shoes shoes;
     private final Pants pants;
     private final Jacket jacket;
-
 
     public Person(String name, Shoes shoes, Pants pants, Jacket jacket) {
         this.name = name;
@@ -19,7 +18,6 @@ public class Person implements Jacket, Pants, Shoes {
         this.jacket = jacket;
     }
 
-    @Override
     public void putItOn() {
         System.out.printf("Человек по имени \"%s\"", name);
         shoes.putItOn();
@@ -27,7 +25,6 @@ public class Person implements Jacket, Pants, Shoes {
         jacket.putItOn();
     }
 
-    @Override
     public void takeOff() {
         System.out.printf("Человек по имени \"%s\"", name);
         shoes.takeOff();

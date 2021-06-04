@@ -34,7 +34,5 @@ public class Run {
         Person person1 = new Person("Колян", new ShoesTwo(), new PantsTwo(), new JacketTwo());
         person1.putItOn();
         person1.takeOff();
-
-
     }
 }

@@ -7,8 +7,8 @@ public abstract class FlyTransport extends Transport {
 
     public FlyTransport(int power, int maxSpeed, int weight, String model, int wingspan, int minLengthRunway) {
         super(power, maxSpeed, weight, model);
-        this.wingspan = wingspan;
-        this.minLengthRunway = minLengthRunway;
+        setWingspan(wingspan);
+        setMinLengthRunway(minLengthRunway);
     }
 
     public int getWingspan() {

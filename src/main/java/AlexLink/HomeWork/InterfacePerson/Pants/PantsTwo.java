@@ -1,6 +1,7 @@
 package AlexLink.HomeWork.InterfacePerson.Pants;
 
 public class PantsTwo implements Pants{
+
     @Override
     public void putItOn() {
         System.out.println(" надевает штаны фирмы \"Коммунар очка\"");

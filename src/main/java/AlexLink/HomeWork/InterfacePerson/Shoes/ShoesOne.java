@@ -2,7 +2,6 @@ package AlexLink.HomeWork.InterfacePerson.Shoes;
 
 public class ShoesOne implements Shoes{
 
-
     @Override
     public void putItOn() {
         System.out.println(" надевает обувь фирмы \"Мозоль-Боль\"");

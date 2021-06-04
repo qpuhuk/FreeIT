@@ -28,21 +28,24 @@ public class Task24 {
         private final int sec;
         private final int min;
         private final int hours;
+        private final int totalSeconds;
 
         public Time(int sec) {
             hours = sec / 3600;
             min = sec % 3600 / 60;
             this.sec = sec % 3600 % 60;
+            totalSeconds = sec;
         }
 
         public Time(int sec, int min, int hours) {
             this.sec = sec;
             this.min = min;
             this.hours = hours;
+            totalSeconds = hours * 3600 + min * 60 + sec;
         }
 
         public int getSec() {
-            return hours * 3600 + min * 60 + sec;
+            return totalSeconds;
         }
 
         public int compareTime(Time t) {

@@ -7,10 +7,10 @@ public abstract class Transport {
     private String model;
 
     public Transport(int power, int maxSpeed, int weight, String model) {
-        this.power = power;
-        this.maxSpeed = maxSpeed;
-        this.weight = weight;
-        this.model = model;
+        setPower(power);
+        setMaxSpeed(maxSpeed);
+        setWeight(weight);
+        setModel(model);
     }
 
     public int getPower() {
