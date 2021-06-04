@@ -13,7 +13,7 @@ public class TestJDBC {
 
         System.out.println("**********************************");
         System.out.println("The list movies that released this year or last year: ");
-        List<String> listTitle = moviesDAO.SelectTitleOfMoviesByCurrentYear();
+        List<String> listTitle = moviesDAO.selectTitleOfMoviesByCurrentYear();
         System.out.println(listTitle);
         System.out.println("**********************************");
 

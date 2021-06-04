@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class MoviesDAOImpl implements SelectMoviesDAO, ChangeMoviesDAO {
     @Override
-    public List<String> SelectTitleOfMoviesByCurrentYear() {
+    public List<String> selectTitleOfMoviesByCurrentYear() {
         try (Connection cn = ConnectorDB.getConnection()) {
             Statement statement = cn.createStatement();
             List<String> listTitle = new ArrayList<>();
