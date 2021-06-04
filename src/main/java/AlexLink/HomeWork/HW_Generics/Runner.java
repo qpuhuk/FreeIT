@@ -6,18 +6,16 @@ package AlexLink.HomeWork.HW_Generics;
 
 public class Runner {
     public static void main(String[] args) {
-        Generics<Integer> test = new Generics<>();
-        test.array = new Integer[10];
-        for (int i = 0; i < test.array.length; i++) {
-            test.array[i] = i;
-            System.out.println(test.getArrayElemen(i));
+        Generics<Integer> test = new Generics<>(new Integer[10]);
+        for (int i = 0; i < test.getLength(); i++) {
+            test.setArrayElementByIndex(i, i);
+            System.out.print(test.getArrayElementByIndex(i) + " ");
         }
-        System.out.println("**************************************");
-        Generics<String> test1 = new Generics<>();
-        test1.array = new String[10];
-        for (int i = 0; i < test1.array.length; i++) {
-            test1.array[i] = "Число " + i;
-            System.out.println(test1.getArrayElemen(i));
+
+        Generics<String> test1 = new Generics<>(new String[10]);
+        for (int i = 0; i < test1.getLength(); i++) {
+            test1.setArrayElementByIndex(i, "Число " + i);
+            System.out.println(test1.getArrayElementByIndex(i));
         }
     }
 }

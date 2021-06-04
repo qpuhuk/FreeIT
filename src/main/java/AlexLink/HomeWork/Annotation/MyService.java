@@ -45,9 +45,4 @@ public class MyService {
                 ", secretName= " + MyService.class.getAnnotation(Version.class).numberVersion() +
                 '}';
     }
-
-    private void thisClassInfo() {
-        System.out.println(toString());
-    }
-
 }

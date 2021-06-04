@@ -8,5 +8,4 @@ import java.lang.annotation.*;
 public @interface Version {
     double numberVersion();
     String secretName() default "";
-
 }
