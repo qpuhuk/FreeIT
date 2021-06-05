@@ -35,8 +35,12 @@ public class TestJDBC {
         System.out.println("**********************************");
 
         System.out.println("Enter the number of years -> ");
-        int count = moviesDAO.DELETE_MOVIES_BY_YEARS(new Scanner(System.in).nextInt());
+        int count = moviesDAO.deleteMoviesByYears(new Scanner(System.in).nextInt());
         System.out.println("Count deleted movies = " + count);
+
+        System.out.println("Enter a title of the movie, which you want to change and new year of release of the movie");
+        int result = moviesDAO.updatePremiereByTitle(new Scanner(System.in).nextLine(),new Scanner(System.in).nextLine());
+        System.out.println("The movie updated? " + (result == 1));
     }
 }
 

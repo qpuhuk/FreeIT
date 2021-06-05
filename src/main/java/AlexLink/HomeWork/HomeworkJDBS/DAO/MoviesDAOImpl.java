@@ -35,8 +35,8 @@ public class MoviesDAOImpl implements SelectMoviesDAO, ChangeMoviesDAO {
             preparedStatement.setString(1, title);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                infoByActors.put(resultSet.getString("name_actors"),
-                        resultSet.getDate("birthday").toLocalDate());
+                infoByActors.put(resultSet.getString(1),
+                        resultSet.getDate(2).toLocalDate());
             }
             return infoByActors;
         } catch (SQLException throwables) {
@@ -79,13 +79,26 @@ public class MoviesDAOImpl implements SelectMoviesDAO, ChangeMoviesDAO {
     }
 
     @Override
-    public int DELETE_MOVIES_BY_YEARS(int year) {
+    public int deleteMoviesByYears(int year) {
         int countOfDelete;
         try (Connection con = ConnectorDB.getConnection()) {
             PreparedStatement ps = con.prepareStatement(SqlQueryOfChange.DELETE_MOVIES_BY_YEARS);
             ps.setInt(1, year);
             countOfDelete = ps.executeUpdate();
             return countOfDelete;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return 0;
+    }
+
+    @Override
+    public int updatePremiereByTitle(String title, String date) {
+        try (Connection connection = ConnectorDB.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(SqlQueryOfChange.UPDATE_PREMIERE_BY_TITLE);
+            preparedStatement.setDate(1, Date.valueOf(date));
+            preparedStatement.setString(2, title);
+            return preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

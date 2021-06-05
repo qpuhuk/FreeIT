@@ -1,5 +1,6 @@
 package AlexLink.HomeWork.HomeworkJDBS.DAO;
 
 public interface ChangeMoviesDAO {
-    int DELETE_MOVIES_BY_YEARS(int year);
+    int deleteMoviesByYears(int year);
+    int updatePremiereByTitle(String title,String date);
 }

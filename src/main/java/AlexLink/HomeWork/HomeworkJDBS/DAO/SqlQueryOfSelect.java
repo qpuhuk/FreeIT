@@ -7,10 +7,10 @@ public class SqlQueryOfSelect {
             "WHERE EXTRACT(YEAR FROM premiere) = 2020 OR EXTRACT(YEAR FROM premiere) = 2021";
 
     public static final String SELECT_INFO_ABOUT_ACTORS_IN_CURRENT_MOVIE =
-            "SELECT name_actors, birthday FROM actors " +
-            "WHERE name_actors IN (SELECT name_actor FROM listactors " +
-            "WHERE ID_movies = (SELECT id FROM movies " +
-            "WHERE title = ?))";
+            "SELECT a.name_actors, a.birthday FROM movies AS m " +
+                    "INNER JOIN listactors AS la ON la.ID_movies = m.id " +
+                    "INNER JOIN actors AS a ON a.name_actors = la.name_actor " +
+                    "WHERE m.title = ?";
 
     public static final String SELECT_ACTORS_BY_COUNT_MOVIES =
             "SELECT name_actor, count(*) AS count FROM listactors " +
