@@ -1,0 +1,24 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+
+<Devices>
+    <Device id="1">
+        <Name>Mouse</Name>
+        <Origin>USA</Origin>
+        <Price currency="USD">50</Price>
+        <Type>
+            <Energy>100</Energy>
+            <Cooler>true</Cooler>
+            <Ports>USB</Ports>
+        </Type>
+    </Device>
+    <Device id="2">
+        <Name>Monitor</Name>
+        <Origin>Germany</Origin>
+        <Price currency="USD">200</Price>
+        <Type>
+            <Energy>150</Energy>
+            <Cooler>false</Cooler>
+            <Ports>COM</Ports>
+        </Type>
+    </Device>
+</Devices>
