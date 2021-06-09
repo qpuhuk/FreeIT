@@ -8,7 +8,7 @@ import java.io.*;
 
 public class Task1 {
     public static void main(String[] args) {
-        String text = "far alone oko potop here";
+        String text = "far\nalone\noko\npotop\nhere";
         File file = new File("polindromes.txt");
         try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file))) {
             bos.write(text.getBytes());
@@ -24,6 +24,7 @@ public class Task1 {
                 read = bis.read();
             }
             System.out.println(stringBuilder.toString().trim());
+            System.out.println("**********************");
             String[] splitText = stringBuilder.toString().trim().split("\\s");
             for (String temp : splitText) {
                 char[] word = temp.toCharArray();
@@ -36,6 +37,7 @@ public class Task1 {
                     }
                     if (count == word.length / 2) {
                         bos.write(temp.getBytes());
+                        System.out.println(temp);
                     }
                 }
             }
